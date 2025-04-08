@@ -1,0 +1,70 @@
+:root {
+    /* Background gradients */
+    --bg-gradient-onyx: linear-gradient(to bottom right, hsl(215, 15%, 34%) 3%, hsl(210, 15%, 20%) 97%);
+    --bg-gradient-jet: linear-gradient(to bottom right, hsla(210, 10%, 25%, 0.25) 0%, hsla(210, 10%, 15%, 0) 100%), hsl(210, 10%, 18%);
+    --bg-gradient-yellow-1: linear-gradient(to bottom right, hsl(190, 80%, 65%) 0%, hsla(36, 100%, 69%, 0) 50%);
+    --bg-gradient-yellow-2: linear-gradient(135deg, hsla(180, 80%, 70%, 0.25) 0%, hsla(180, 80%, 60%, 0) 60%), hsl(210, 10%, 18%);
+  
+    /* Border and text gradients */
+    --border-gradient-onyx: linear-gradient(to bottom right, hsl(210, 10%, 38%) 0%, hsla(210, 10%, 38%, 0) 50%);
+    --text-gradient-yellow: linear-gradient(to right, hsl(188, 100%, 72%), hsl(210, 100%, 66%));
+  
+    /* Core colors */
+    --jet: hsl(210, 10%, 24%);
+    --onyx: hsl(210, 11%, 17%);
+    --eerie-black-1: hsla(0, 0%, 0%, 0.3);
+    --eerie-black-2: hsla(0, 0%, 0%, 0.6);
+    --smoky-black: hsla(0, 0%, 0%, 0.2);
+    --white-1: hsl(0, 0%, 100%);
+    --white-2: hsl(0, 0%, 97%);
+  
+    /* Accent colors */
+    --orange-yellow-crayola: hsl(185, 90%, 70%);
+    --vegas-gold: hsl(180, 60%, 60%);
+    --light-gray: hsl(0, 0%, 85%);
+    --light-gray-70: hsla(0, 0%, 85%, 0.7);
+    --bittersweet-shimmer: hsl(280, 80%, 58%);
+  
+    /* Typography */
+    --ff-poppins: 'Poppins', sans-serif;
+    --fs-1: 24px;
+    --fs-2: 18px;
+    --fs-3: 17px;
+    --fs-4: 16px;
+    --fs-5: 15px;
+    --fs-6: 14px;
+    --fs-7: 13px;
+    --fs-8: 11px;
+    --fw-300: 300;
+    --fw-400: 400;
+    --fw-500: 500;
+    --fw-600: 600;
+  
+    /* Shadows */
+    --shadow-1: -4px 8px 24px hsla(0, 0%, 0%, 0.2);
+    --shadow-2: 0 16px 30px hsla(0, 0%, 0%, 0.2);
+    --shadow-3: 0 16px 40px hsla(0, 0%, 0%, 0.2);
+    --shadow-4: 0 25px 50px hsla(0, 0%, 0%, 0.12);
+    --shadow-5: 0 24px 80px hsla(0, 0%, 0%, 0.2);
+  
+    /* Transitions */
+    --transition-1: 0.25s ease;
+    --transition-2: 0.5s ease-in-out;
+  
+    /* Blur effects */
+    --blur-half: blur(4px);
+    --blur-most: blur(10px);
+    --blur-partial: blur(2px);
+  }
+.read-more-btn, .read-less-btn {
+    cursor: pointer;
+    font-size: var(--fs-8);
+    font-weight: var(--fw-600);
+    color: var(--orange-yellow-crayola);
+    text-decoration: underline;
+    transition: var(--transition-1);
+    margin-bottom: 10px;
+  }
+  .read-more-btn:hover, .read-less-btn:hover {
+    color: var(--vegas-gold);
+  }
