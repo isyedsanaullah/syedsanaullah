@@ -1,0 +1,73 @@
+/* Base styles for the warning box - Very Very Very Attractive */
+.warning-box {
+    position: fixed;
+    top: -150px; /* Start even further hidden for a smoother reveal */
+    left: 50%;
+    transform: translateX(-50%);
+    background: linear-gradient(135deg, #0073ff, #000a58); /* Deep, vibrant gradient */
+    color: #fce4ec; /* Soft, contrasting pink */
+    padding: 25px 35px; /* More generous padding */
+    border-radius: 15px; /* Softer, more modern rounded corners */
+    font-family: "Montserrat", sans-serif; /* Modern, readable font */
+    font-weight: 600; /* Slightly bolder for emphasis */
+    z-index: 9999;
+    box-shadow: 0 15px 40px rgba(0, 166, 255, 0.5); /* Deeper, more noticeable shadow */
+    max-width: 650px; /* Slightly wider for better readability */
+    width: 90%; /* Take up more horizontal space on smaller screens */
+    display: flex;
+    flex-direction: column; /* Stack elements vertically */
+    align-items: flex-start; /* Align text to the left */
+    justify-content: flex-start;
+    opacity: 0;
+    transition: transform 0.5s cubic-bezier(0.68, -0.55, 0.27, 1.55), opacity 0.5s ease-in-out; /* More dynamic animation */
+    border: 2px solid rgba(255, 255, 255, 0.1); /* Subtle border for definition */
+}
+
+/* Show animation - Very Very Very Attractive */
+.warning-box.show {
+    top: 25px; /* More prominent reveal from the top */
+    opacity: 1;
+}
+
+/* Text inside the box - Very Very Very Attractive */
+.warning-box p {
+    margin: 15px 0 0; /* More vertical spacing */
+    flex: 1;
+    padding-right: 25px; /* More right padding */
+    line-height: 1.6; /* Improved readability */
+    font-size: 1.1em; /* Slightly larger text */
+    color: #fff; /* Pure white for better contrast */
+}
+
+/* Close (×) button - Very Very Very Attractive */
+.close-btn {
+    cursor: pointer;
+    font-size: 28px; /* Larger and more prominent */
+    color: #ff4081; /* Vibrant, attention-grabbing pink */
+    background: transparent; /* Ensure no background */
+    border: none;
+    outline: none;
+    align-self: flex-end; /* Position at the top-right */
+    transition: transform 0.3s ease-out, color 0.3s ease-in-out; /* Smoother transition */
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2); /* Subtle text shadow for depth */
+}
+
+.close-btn:hover {
+    transform: scale(1.3); /* More pronounced hover effect */
+    color: #f50057; /* Deeper pink on hover */
+}
+
+/* Optional: Add a subtle icon or visual element */
+.warning-box::before {
+    content: "\26A0"; /* Warning sign emoji */
+    font-size: 2em;
+    color: #ffd740; /* Gold/Amber color for the icon */
+    position: absolute;
+    left: 20px;
+    top: 20px;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+.warning-box p {
+    margin-left: 45px; /* Adjust paragraph margin to accommodate the icon */
+}
