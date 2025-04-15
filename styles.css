@@ -97,7 +97,92 @@ button {
 
 
 
+.warning-box {
+    position: fixed;
+    top: -150px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: linear-gradient(145deg, #1e3c72, #2a5298);
+    color: white;
+    padding: 20px 45px 20px 55px;
+    border-radius: 12px;
+    font-family: 'Segoe UI', Roboto, sans-serif;
+    font-weight: 500;
+    z-index: 9999;
+    box-shadow: 0 8px 25px rgba(30, 60, 114, 0.4);
+    max-width: 650px;
+    width: 90%;
+    opacity: 0;
+    transition: opacity 0.4s ease, top 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    max-height: 200px; /* Fixed height */
+    overflow-y: auto; /* Make it scrollable */
+}
 
+.warning-box.show {
+    top: 20px;
+    opacity: 1;
+}
+
+.warning-box p {
+    margin: 0;
+    line-height: 1.6;
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.95);
+    padding-right: 15px;
+}
+
+.close-btn {
+    position: sticky;
+    top: 5px;
+    float: right;
+    cursor: pointer;
+    font-size: 28px;
+    color: rgba(255, 255, 255, 0.8);
+    background: rgba(0, 0, 0, 0.2);
+    border: none;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    transition: all 0.2s ease;
+    line-height: 28px;
+    margin-left: 10px;
+    z-index: 2;
+}
+
+.close-btn:hover {
+    color: white;
+    background: rgba(255, 255, 255, 0.25);
+}
+
+.warning-box::before {
+    content: "⚠";
+    font-size: 22px;
+    position: absolute;
+    left: 20px;
+    top: 20px;
+    color: #FFD700;
+}
+
+/* Custom scrollbar */
+.warning-box::-webkit-scrollbar {
+    width: 6px;
+}
+
+.warning-box::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0.1);
+    border-radius: 0 12px 12px 0;
+}
+
+.warning-box::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 3px;
+}
+
+.warning-box strong {
+    color: #fff;
+    font-weight: 600;
+}
 
 
 
