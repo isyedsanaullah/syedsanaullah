@@ -72,19 +72,6 @@ button {
 
 
 
-.warning-box {
-  background-color: var(--jet); /* Very light pink background */
-  padding: 15px;
-  margin: 5px;
-  border-radius: 4px;
-  font-family: sans-serif; /* Clean, professional font */
-}
-
-.warning-box p {
-  color: #d32f2f; /* Consistent deeper red text */
-  margin: 0;
-  font-weight: 500; /* Slightly bolder text for emphasis */
-}
 .read-more-btn, .read-less-btn {
   cursor: pointer;
   font-size: var(--fs-8);
