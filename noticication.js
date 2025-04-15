@@ -19,7 +19,7 @@ window.addEventListener("DOMContentLoaded", () => {
       // Auto-hide after 5 seconds
       setTimeout(() => {
         hideWarning();
-      }, 15000);
+      }, 25000);
     });
 });
 
