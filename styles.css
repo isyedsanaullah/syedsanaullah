@@ -67,27 +67,46 @@ button {
 
 
 
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 .warning-box {
     position: fixed;
     top: -150px;
     left: 50%;
     transform: translateX(-50%);
-    background: linear-gradient(135deg, #1a2980, #26d0ce); /* Elegant teal to navy gradient */
-    color: #ffffff;
-    padding: 25px 40px 25px 60px; /* More left padding for icon space */
-    border-radius: 12px;
-    font-family: "Montserrat", sans-serif;
-    font-weight: 600;
+    background: linear-gradient(145deg, #1e3c72, #2a5298, #7db9e8);
+    color: white;
+    padding: 25px 45px 25px 65px;
+    border-radius: 14px;
+    font-family: 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    font-weight: 500;
     z-index: 9999;
-    box-shadow: 0 10px 30px rgba(26, 41, 128, 0.3);
-    max-width: 650px;
+    box-shadow: 0 12px 35px rgba(30, 60, 114, 0.4);
+    max-width: 680px;
     width: 90%;
-    display: flex;
-    flex-direction: column;
     opacity: 0;
-    transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-    border: none;
-    backdrop-filter: blur(5px); /* Subtle blur effect */
+    transition: opacity 0.5s ease, top 0.7s cubic-bezier(0.22, 1, 0.36, 1);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(8px);
 }
 
 .warning-box.show {
@@ -96,68 +115,93 @@ button {
 }
 
 .warning-box p {
-    margin: 10px 0 0;
-    flex: 1;
+    margin: 0;
     line-height: 1.7;
-    font-size: 1.1em;
+    font-size: 15px;
     color: rgba(255, 255, 255, 0.95);
-    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
-    padding-right: 30px;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
 }
 
-/* Enhanced close button */
 .close-btn {
     position: absolute;
-    top: 15px;
-    right: 15px;
+    top: 18px;
+    right: 18px;
     cursor: pointer;
-    font-size: 32px;
+    font-size: 34px;
     color: rgba(255, 255, 255, 0.8);
     background: transparent;
     border: none;
-    outline: none;
-    width: 40px;
-    height: 40px;
+    width: 36px;
+    height: 36px;
     display: flex;
     align-items: center;
     justify-content: center;
     border-radius: 50%;
-    transition: all 0.3s ease;
+    transition: all 0.25s ease;
+    line-height: 34px;
+    padding: 0;
 }
 
 .close-btn:hover {
-    transform: scale(1.2);
-    color: #ffffff;
+    color: white;
     background: rgba(255, 255, 255, 0.15);
+    transform: rotate(90deg) scale(1.1);
 }
 
-/* Elegant warning icon */
 .warning-box::before {
-    content: "⚠";
-    font-size: 28px;
-    color: #FFD700;
+    content: "✨";
+    font-size: 26px;
     position: absolute;
-    left: 20px;
-    top: 22px;
-    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    left: 25px;
+    top: 24px;
+    animation: sparkle 2s infinite alternate;
 }
 
-/* Optional: Add a subtle border gradient */
-.warning-box::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    border-radius: 10px;
-    padding: 2px;
-    background: linear-gradient(135deg, rgba(255,255,255,0.4), rgba(255,255,255,0));
-    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
-    -webkit-mask-composite: xor;
-    mask-composite: exclude;
-    pointer-events: none;
+@keyframes sparkle {
+    0% { opacity: 0.7; transform: scale(1); }
+    100% { opacity: 1; transform: scale(1.1); }
 }
+
+.warning-box strong {
+    color: #fff;
+    font-weight: 600;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+.warning-box br {
+    content: " ";
+    display: block;
+    margin: 8px 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
