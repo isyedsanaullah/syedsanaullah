@@ -128,9 +128,9 @@ button {
 .warning-box p {
     margin: 0;
     line-height: 1.6;
-    font-size: 14px;
+    font-size: 10px;
     color: rgba(255, 255, 255, 0.95);
-    padding-right: 15px;
+    padding-right: 8px;
 }
 
 .close-btn {
